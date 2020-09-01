@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Abhinav Kumar Dubey</title>
+    <link>https://abhinavkrdubey.github.io/project/</link>
+      <atom:link href="https://abhinavkrdubey.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 11 May 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abhinavkrdubey.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Projects</title>
+      <link>https://abhinavkrdubey.github.io/project/</link>
+    </image>
+    
+    <item>
+      <title>Automating Zoom Meeting Joining</title>
+      <link>https://abhinavkrdubey.github.io/project/zoom/</link>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://abhinavkrdubey.github.io/project/zoom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Covid19 Data Scrapping from Worldometer</title>
+      <link>https://abhinavkrdubey.github.io/project/covid/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://abhinavkrdubey.github.io/project/covid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reinforcement Learning- Virtual Tennis</title>
+      <link>https://abhinavkrdubey.github.io/project/virtualtennis/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://abhinavkrdubey.github.io/project/virtualtennis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reinforcement Learning- Continous Control</title>
+      <link>https://abhinavkrdubey.github.io/project/continous/</link>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://abhinavkrdubey.github.io/project/continous/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reinforcement Learning- Banana Navigation</title>
+      <link>https://abhinavkrdubey.github.io/project/navigation/</link>
+      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://abhinavkrdubey.github.io/project/navigation/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
