@@ -1,17 +1,62 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { link } from "../lib/links";
+
+const contacts = [
+  {
+    label: "01 / START A CONVERSATION",
+    title: "Email",
+    detail: "abhinavkumardubey9481@gmail.com",
+    href: "mailto:abhinavkumardubey9481@gmail.com",
+    external: false,
+  },
+  {
+    label: "02 / PROFESSIONAL BACKGROUND",
+    title: "LinkedIn",
+    detail: "Experience, ideas and connections.",
+    href: "https://www.linkedin.com/in/abhinavkrdubey/",
+    external: true,
+  },
+  {
+    label: "03 / CODE & PROJECTS",
+    title: "GitHub",
+    detail: "@abhinavkrdubey",
+    href: "https://github.com/abhinavkrdubey",
+    external: true,
+  },
+];
 ---
-<BaseLayout title="Contact — Abhinav Kumar Dubey">
+<BaseLayout
+  title="Contact — Abhinav Kumar Dubey"
+  description="Get in touch with Abhinav Kumar Dubey about data science, machine learning and collaboration."
+>
   <div class="page-content">
     <div class="page-heading">
       <p class="eyebrow">START A CONVERSATION</p>
-      <h1>Let’s build<br /><span class="serif">something useful.</span></h1>
-      <p>Interested in applied machine learning, a technical discussion or exchanging ideas? Find me on GitHub.</p>
+      <h1>Good work starts<br /><span class="serif">with a conversation.</span></h1>
+      <p>
+        Have a machine learning problem, a collaboration in mind,
+        or a question about my work? Here’s where to find me.
+      </p>
     </div>
-    <a class="contact-card" href="https://github.com/abhinavkrdubey" target="_blank" rel="noopener noreferrer">
-      <span>01 / CODE &amp; PROJECTS</span>
-      <strong>GitHub ↗</strong>
-      <span>@abhinavkrdubey</span>
+
+    {contacts.map((contact) => (
+      <a
+        class="contact-card"
+        href={contact.href}
+        target={contact.external ? "_blank" : undefined}
+        rel={contact.external ? "noopener noreferrer" : undefined}
+      >
+        <span>{contact.label}</span>
+        <strong>{contact.title} ↗</strong>
+        <span style="overflow-wrap:anywhere">{contact.detail}</span>
+      </a>
+    ))}
+
+    <a class="contact-card" href={link("resume.pdf")} download>
+      <span>04 / THE DETAILS</span>
+      <strong>Download résumé ↓</strong>
+      <span>Experience, education and technical skills · PDF</span>
     </a>
   </div>
 </BaseLayout>

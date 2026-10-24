@@ -1,29 +1,106 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { link } from "../lib/links";
+
+const experience = [
+  {
+    company: "Circana",
+    role: "Senior Manager, Client Sales & Insights",
+    dates: "June 2024 — Present",
+    summary: "Building ML, NLP and GenAI solutions for consumer and shopper insights, including product classification, competitive intelligence, reporting automation and attribute analysis.",
+  },
+  {
+    company: "BeepKart",
+    role: "Data Analyst / Data Scientist",
+    dates: "November 2022 — June 2024",
+    summary: "Developed pricing and cost prediction models, lead prioritization, location optimization and reporting workflows for used two-wheeler operations.",
+  },
+  {
+    company: "Tiger Analytics",
+    role: "Analyst — Data Science",
+    dates: "March 2022 — November 2022",
+    summary: "Worked on retail sales prediction and applied statistical analysis, regression and classification to business problems.",
+  },
+  {
+    company: "Accenture",
+    role: "Associate Software Engineer",
+    dates: "July 2021 — March 2022",
+    summary: "Worked on aviation data integration and inventory workflows using SAP BODS ETL and ABAP.",
+  },
+];
 ---
-<BaseLayout title="About — Abhinav Kumar Dubey">
+<BaseLayout
+  title="About — Abhinav Kumar Dubey"
+  description="My background in applied machine learning, NLP, analytics and data engineering."
+>
   <div class="page-content">
     <div class="page-heading">
-      <p class="eyebrow">BEHIND THE WORK</p>
-      <h1>Curiosity, with<br /><span class="serif">a purpose.</span></h1>
-      <p>I’m Abhinav, a Bengaluru-based data scientist interested in turning difficult questions into useful systems.</p>
+      <p class="eyebrow">BEHIND THE WORK / BENGALURU, INDIA</p>
+      <h1>Curiosity.<br />Context.<br /><span class="serif">Useful outcomes.</span></h1>
+      <p>
+        I’m Abhinav Kumar Dubey. I build machine learning and analytics
+        solutions across consumer goods, retail and e-commerce.
+      </p>
+      <a class="button" href={link("resume.pdf")} download>
+        Download résumé <span>↓</span>
+      </a>
     </div>
+
     <section class="about section">
-      <div><h2>What I <span class="serif">care about.</span></h2></div>
+      <div><h2>How I <span class="serif">work.</span></h2></div>
       <div class="about-copy">
-        <p>I work across machine learning, natural language processing and analytics. My focus is on understanding the problem, establishing a baseline and evaluating whether a solution actually helps.</p>
-        <p>At Circana, my work involves consumer and shopper insights, classification, automation and data quality.</p>
-        <p>I’m also deepening my understanding of deep learning and large language models through implementation and experimentation.</p>
+        <p>
+          My work connects business questions with data, models and
+          repeatable workflows. I’m interested in understanding the decision
+          a system needs to support before choosing the technique.
+        </p>
+        <p>
+          At Circana, I work on classification, semantic product similarity,
+          data quality and analytics automation. The work spans problem
+          framing, model development and collaboration with stakeholders.
+        </p>
+        <p>
+          My earlier experience covers pricing, operations analytics,
+          retail prediction and data integration.
+        </p>
       </div>
     </section>
+
     <section class="about section">
-      <div><h2>Experience &amp;<br /><span class="serif">education.</span></h2></div>
+      <div><h2>Where I’ve<br /><span class="serif">contributed.</span></h2></div>
       <div class="about-copy">
-        <div class="career-row"><h3>Circana</h3><p>Data science · Consumer and shopper insights</p></div>
-        <div class="career-row"><h3>Earlier experience</h3><p>BeepKart · Tiger Analytics · Accenture</p></div>
-        <div class="career-row"><h3>Education</h3><p>MSc, Liverpool John Moores University</p></div>
-        <a class="section-link" href={link("contact/")}>Start a conversation ↗</a>
+        {experience.map((job) => (
+          <article class="career-row">
+            <p class="eyebrow">{job.dates}</p>
+            <h3>{job.company}</h3>
+            <p><strong>{job.role}</strong></p>
+            <p>{job.summary}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="about section">
+      <div><h2>Foundations &amp;<br /><span class="serif">tools.</span></h2></div>
+      <div class="about-copy">
+        <div class="career-row">
+          <h3>MSc — Machine Learning &amp; Artificial Intelligence</h3>
+          <p>Liverpool John Moores University · 2021–2024 · Part time</p>
+          <p>Research focused on contextual question answering using BERT and its variants.</p>
+        </div>
+        <div class="career-row">
+          <h3>BTech (Hons) — Computer Science</h3>
+          <p>Jain University · 2017–2021</p>
+          <p>Specialization in Data Science.</p>
+        </div>
+        <div class="toolkit">
+          <span>TECHNICAL TOOLKIT</span>
+          <p>
+            Python / SQL / scikit-learn / TensorFlow / Sentence Transformers /
+            FAISS / Optuna / Git / AWS
+          </p>
+        </div>
+        <a class="section-link" href={link("contact/")}>Get in touch ↗</a>
       </div>
     </section>
   </div>
