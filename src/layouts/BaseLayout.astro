@@ -1,0 +1,56 @@
+---
+import "../styles/global.css";
+import { link } from "../lib/links";
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = "Abhinav Kumar Dubey — Data Scientist",
+  description = "Data science, machine learning and practical AI. Projects and notes by Abhinav Kumar Dubey."
+} = Astro.props;
+const navigation = [
+  ["Projects", "projects/"],
+  ["Blog", "blog/"],
+  ["About", "about/"],
+  ["Contact", "contact/"],
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f5f4ef" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="shell">
+      <header>
+        <a class="wordmark" href={link()} aria-label="Abhinav, home">
+          abhinav<span>.</span>
+        </a>
+        <nav aria-label="Main navigation">
+          {navigation.map(([label, path]) => (
+            <a
+              href={link(path)}
+              aria-current={Astro.url.pathname.startsWith(link(path)) ? "page" : undefined}
+            >{label}</a>
+          ))}
+        </nav>
+      </header>
+      <main id="main" class="site-main"><slot /></main>
+      <footer>
+        <span>© {new Date().getFullYear()} Abhinav Kumar Dubey</span>
+        <a href="https://github.com/abhinavkrdubey" target="_blank" rel="noopener noreferrer">
+          GitHub ↗
+        </a>
+      </footer>
+    </div>
+  </body>
+</html>

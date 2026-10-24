@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { link } from "../lib/links";
+---
+<BaseLayout title="About — Abhinav Kumar Dubey">
+  <div class="page-content">
+    <div class="page-heading">
+      <p class="eyebrow">BEHIND THE WORK</p>
+      <h1>Curiosity, with<br /><span class="serif">a purpose.</span></h1>
+      <p>I’m Abhinav, a Bengaluru-based data scientist interested in turning difficult questions into useful systems.</p>
+    </div>
+    <section class="about section">
+      <div><h2>What I <span class="serif">care about.</span></h2></div>
+      <div class="about-copy">
+        <p>I work across machine learning, natural language processing and analytics. My focus is on understanding the problem, establishing a baseline and evaluating whether a solution actually helps.</p>
+        <p>At Circana, my work involves consumer and shopper insights, classification, automation and data quality.</p>
+        <p>I’m also deepening my understanding of deep learning and large language models through implementation and experimentation.</p>
+      </div>
+    </section>
+    <section class="about section">
+      <div><h2>Experience &amp;<br /><span class="serif">education.</span></h2></div>
+      <div class="about-copy">
+        <div class="career-row"><h3>Circana</h3><p>Data science · Consumer and shopper insights</p></div>
+        <div class="career-row"><h3>Earlier experience</h3><p>BeepKart · Tiger Analytics · Accenture</p></div>
+        <div class="career-row"><h3>Education</h3><p>MSc, Liverpool John Moores University</p></div>
+        <a class="section-link" href={link("contact/")}>Start a conversation ↗</a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,16 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { link } from "../lib/links";
+const { frontmatter } = Astro.props;
+const section = frontmatter.section ?? "blog";
+---
+<BaseLayout title={`${frontmatter.title} — Abhinav Kumar Dubey`} description={frontmatter.description}>
+  <article class="article">
+    <a class="back-link" href={link(`${section}/`)}>← Back to {section}</a>
+    <p class="eyebrow">{frontmatter.category ?? "NOTES"}</p>
+    <h1>{frontmatter.title}</h1>
+    <p class="article-deck">{frontmatter.description}</p>
+    {frontmatter.date && <p><time datetime={String(frontmatter.date)}>{frontmatter.date}</time></p>}
+    <slot />
+  </article>
+</BaseLayout>
